@@ -1,1 +1,29 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
 
+[project]
+name = "rsd_tts"
+version = "0.1.0"
+description = "Libreria Python per sintesi vocale in italiano con pulizia del testo"
+authors = [
+    { name = "Il tuo Nome", email = "tua@email.com" },
+]
+readme = "README.md"
+license = { text = "MIT" }
+keywords = ["text-to-speech", "italiano", "TTS", "sintesi vocale"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft :: Windows",
+]
+
+dependencies = [
+    "pywin32>=300",
+]
+
+[project.urls]
+Homepage = "https://github.com/RezaSD-Dev/rsd_tts"
+Documentation = "https://github.com/RezaSD-Dev/rsd_tts#readme"
