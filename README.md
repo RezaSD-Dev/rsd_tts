@@ -17,6 +17,8 @@
 - ✅ Ottimizzato per la pronuncia italiana
 - ✅ Regolazione di velocità/volume
 - ✅ Integrazione nativa con SAPI (Windows)
+- ✅ Pulizia automatica della domanda per risposte AI
+  
 
 Installazione:
 pip install rsd_tts
