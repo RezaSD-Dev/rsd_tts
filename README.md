@@ -21,6 +21,6 @@
 - ✅ Integrazione nativa con SAPI (Windows)
 
 ```python
-from rsd_tts import parlare
+from rsd_tts import parla
 
-parlare("Ciao mondo! :)")  # Pronuncia "Ciao mondo sorriso"
+parla("Ciao mondo! :)")  # Pronuncia "Ciao mondo sorriso"
