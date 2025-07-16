@@ -2,7 +2,6 @@
 
 **Libreria Python per sintesi vocale in italiana (Windows 10/11)**  
 *Pulizia automatica del testo e output vocale chiaro*
-
 ---
 
 ## ⚠️ Requisiti di sistema
@@ -11,7 +10,6 @@
 - Python 3.7+  
 
 *(Non supporta macOS/Linux)*  
-
 ---
 
 ✨ **Funzionalità**:
@@ -26,4 +24,9 @@ pip install rsd_tts
 ```python
 from rsd_tts import parla
 
+[Valori default]
 parla("Ciao mondo! :)")  # Pronuncia "Ciao mondo sorriso"
+
+[Controllo velocità e volume]
+parla("Funziona perfettamente! :)", velocità=-2, volume=90)
+
