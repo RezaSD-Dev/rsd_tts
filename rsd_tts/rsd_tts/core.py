@@ -1,7 +1,10 @@
 import win32com.client
 import re
+import sys
 
-speaker = win32com.client.Dispatch("SAPI.SpVoice")
+# Controllo sistema operativo
+if not sys.platform.startswith("win"):
+    raise OSError("Questa libreria richiede Windows 10/11 con voice pack italiano installato.")
 
 def pulisci_testo(testo):
     """Pulisce il testo da caratteri speciali e formattazioni indesiderate"""
@@ -43,22 +46,21 @@ def pulisci_testo(testo):
     
     return testo
 
-def parla(testo, is_ai_response=True):
-    """Pronuncia il testo con controlli aggiuntivi"""
+def parla(testo, velocità=0, volume=100, is_ai_response=True):
+    """Pronuncia il testo pulito in italiano.
+    
+    Args:
+        testo (str): Testo da pronunciare
+        velocità (int): Da -10 (lento) a 10 (veloce)
+        volume (int): Da 0 (muto) a 100 (massimo)
+        is_ai_response (bool): Se True, applica pulizia aggiuntiva per risposte AI
+    """
+    testo_pulito = _pulisci_testo(testo)
+    
     if is_ai_response:
-        # 1. Rimuovi domande dalla risposta AI
-        testo = re.sub(r'\?.*$', '.', testo)
-        
-        # 2. Rimuovi prompt che potrebbero innescare nuove risposte
-        testo = re.sub(r'(puoi|potresti|vorrei|per favore|grazie)', '', testo, flags=re.IGNORECASE)
-        
-        # 3. Tronca le risposte lunghe
-        if len(testo) > 500:
-            testo = testo[:497] + '...'
+        testo_pulito = re.sub(r'\?.*$', '.', testo_pulito)  # Rimuove domande
     
-    testo_pulito = pulisci_testo(testo)
-    
-    if testo_pulito:
-        speaker.Rate = 0
-        speaker.Volume = 100
-        speaker.Speak(testo_pulito)  # Rimosso il secondo parametro
+    speaker = win32com.client.Dispatch("SAPI.SpVoice")
+    speaker.Rate = velocità
+    speaker.Volume = volume
+    speaker.Speak(testo_pulito)
