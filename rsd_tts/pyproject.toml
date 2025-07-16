@@ -13,6 +13,9 @@ readme = "README.md"
 license = { text = "MIT" }
 keywords = ["text-to-speech", "italiano", "TTS", "sintesi vocale"]
 classifiers = [
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+    "Operating System :: Microsoft :: Windows :: Windows 11",
+    "Environment :: Win32 (MS Windows)",
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
