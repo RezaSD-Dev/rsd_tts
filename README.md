@@ -20,6 +20,9 @@
 - ✅ Regolazione di velocità/volume
 - ✅ Integrazione nativa con SAPI (Windows)
 
+Installazione:
+pip install rsd_tts
+
 ```python
 from rsd_tts import parla
 
