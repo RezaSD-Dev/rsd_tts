@@ -21,8 +21,9 @@
   
 
 Installazione:
-pip install rsd_tts
+pip install rsd-tts-RsdDev
 
+Uso:
 ```python
 from rsd_tts import parla
 

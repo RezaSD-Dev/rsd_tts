@@ -3,8 +3,8 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "rsd_tts"
-version = "0.1.3"
+name = "rsd_tts_RsdDev"
+version = "0.1.5"
 description = "Libreria Python per sintesi vocale in italiano con pulizia del testo (win 10/11)"
 authors = [
     { name = "Reza Shahrezaei"},
@@ -19,8 +19,7 @@ classifiers = [
     "Environment :: Win32 (MS Windows)",
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
-    "Programming Language :: Python :: 3.7+",
+    "License :: OSI Approved :: MIT License",    
     "Natural Language :: Italian",
 ]
 
