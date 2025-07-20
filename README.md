@@ -1,6 +1,6 @@
 # rsd_tts · [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Libreria Python per sintesi vocale in italiana (Windows 10/11)**  
+**Libreria Python per sintesi vocale in italiano (Windows 10/11)**  
 *Pulizia automatica del testo e output vocale chiaro*
 ---
 
